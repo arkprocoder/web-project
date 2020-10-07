@@ -157,10 +157,10 @@ USE_L10N = True
 USE_TZ = True
 
 EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='tusharasingh1@gmail.com'
-EMAIL_HOST_PASSWORD='mrmere@1'
-EMAIL_PORT= 587
-EMAIL_USER_TLS= True
+EMAIL_HOST_USER  = 'yourremail@gmail.com'
+EMAIL_HOST_PASSWORD = 'your password'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 #enable less secure app
 
@@ -171,6 +171,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'static')
+]
 
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
